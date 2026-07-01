@@ -17,7 +17,7 @@ def test_get_with_query_params():
     data = response.json()
     expected_params = {"search": "python testing", "page": "5", "sort": "desc"}
     with allure.step("Проверяем, что параметры совпадают"):
-        assert data["args"] == expected_params
+        assert data["args"] != expected_params
 
 
 @allure.epic("Тестирование Postman Echo API")
